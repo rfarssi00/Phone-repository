@@ -44,10 +44,10 @@ int main(void)
     char ln[16];
 
 
-/*Afficher le menu à l'utilisateur*/
+/*Afficher le menu Ã  l'utilisateur*/
 	system("cls");
-    system("COLOR 30");
-    system("COLOR 30");
+    system("COLOR 3F");
+    system("COLOR 3f");
     system("cls");
     int choix1;
     printf("\n\n");
@@ -75,7 +75,7 @@ int main(void)
     printf("                                 ********************************************************\n");
 
 
-/*Revenir au menu après chaque instruction jusqu'à ce que l'utilisateur quitte*/
+/*Revenir au menu aprÃ¨s chaque instruction jusqu'Ã  ce que l'utilisateur quitte*/
  	while (choix != 6) {
 
 		/*Obtenir l'option de l'utilisateur*/
@@ -84,16 +84,16 @@ int main(void)
 
         /*Si l'option est 1 (Ajouter):*/
 		if (choix == 1) {
-                /*Prendre les données de l'utilisateur.*/
+                /*Prendre les donnÃ©es de l'utilisateur.*/
 			printf("Veuillez saisir votre nom: ");
 			scanf("%s", &e.nom);
 			printf("Veuillez saisir votre numero de telephone: ");
 			scanf("%s", &e.tel);
 			printf("Veuillez saisir votre adresse mail: ");
 			scanf("%s", &e.mail);
-			/*Créez un nouveau nœud*/
+			/*CrÃ©ez un nouveau nÅ“ud*/
 			p = ajout(p, e);
-			/*Confirmez la création du nœud*/
+			/*Confirmez la crÃ©ation du nÅ“ud*/
 			printf("------Contact enregistre-----\n\n");
 
 		}
@@ -570,7 +570,7 @@ void chercher_contact_par_1_lettre(struct elem_arbre *r, char l[]){
 		printf("Aucun nom ne commance par %s!! \n",l);
 	}
 	else{
-		printf("Les noms commançant pas %s sont: \n",l);
+		printf("Les noms commanÃ§ant pas %s sont: \n",l);
 
 		struct elem_arbre *trios = lettres->fils;
 		while (trios!=NULL){
@@ -601,7 +601,7 @@ void chercher_contact_par_2_lettre(struct elem_arbre *r, char l[]){
 			int taille=strlen(trios->info.nom);
 
 			if(trios->info.nom[0]<=l[1] && trios->info.nom[taille-1]>=l[1]){
-				printf("Les noms commançant pas %s sont: \n",l);
+				printf("Les noms commanÃ§ant pas %s sont: \n",l);
 				struct elem_arbre *contacts = trios->fils;
 				while(contacts!=NULL && contacts->info.nom[1]<=l[1]){
 					if(contacts->info.nom[1]==l[1]){
@@ -650,3 +650,4 @@ struct elem_arbre * chercher_contact_par_nom(struct elem_arbre *r, char l[]){
 	}
 	return NULL;
 }
+
