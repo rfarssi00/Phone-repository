@@ -1,4 +1,4 @@
-# Phone-respiratory-(Répertoire téléphonique)
+# Répertoire téléphonique
 ---------------------------------------Advanced Data Structures Project using N-ary trees in C language---------------------------------------
 
 Projet de structures de données avancées: Gestion des contacts téléphonique sous forme arborescente 
